@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import TcpSocket from 'react-native-tcp-socket';
 
 export default function Home() {
-    const [room, setRoom] = useState<string | null>('Living')
+    const [room, setRoom] = useState<string | null>(null)
     const [atHome, setAtHome] = useState<boolean>(true)
     const [day, setDay] = useState<boolean>(true)
     const [state, setState] = useState<string>('off')
@@ -23,7 +23,7 @@ export default function Home() {
 
     useEffect(() => {
         // Setup TCP connection
-        const ip = '192.168.210.206';
+        const ip = '10.0.2.2';
         const client = TcpSocket.createConnection({ port: 8080, host: ip }, () => {
             console.log('Connected to YOLO server');
         });
@@ -34,7 +34,7 @@ export default function Home() {
 
             // Always log the received data
             if (stateRef.current == 'on') {
-                console.log('Data received:', message);
+                console.log('light on');
             }
             else {
                 console.log("light off")
