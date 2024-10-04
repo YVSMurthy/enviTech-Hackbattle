@@ -1,0 +1,97 @@
+/* Ensure the body background is not black */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Or beige */
+    font-family: 'Roboto', sans-serif; /* Apply a better font */
+  }
+  
+  /* Main container for the entire services section */
+  .services-section {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+  }
+  
+  /* Left section containing the services list */
+  .services-list {
+    width: 70%; /* Takes 70% of the screen width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the services */
+    padding-left: 50px; /* Add padding for spacing */
+    background-color: #ffffff !important; /* White background, forced */
+  }
+  
+  /* Right section containing the "Our Services" text */
+  .services-banner {
+    width: 30%; /* Takes 30% of the screen width */
+    background-color: #275b05; /* Brown background color */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Add padding for better spacing */
+  }
+  
+  .services-banner h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2; /* Adjust line height for better spacing */
+    font-size: 90px;
+  }
+  
+  /* Service item styles */
+  .service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* Increased spacing between service items */
+    margin-top: 30px;
+    padding: 10px 0; /* Padding for better spacing around items */
+  }
+  
+  /* Reverse the order of image and text */
+  .service-item.reverse {
+    flex-direction: row; /* Default to row direction */
+  }
+  
+  /* Adjust image attributes in CSS */
+  .service-icon {
+    object-fit: cover; /* Maintain aspect ratio */
+    width: 220px; /* Set a fixed width */
+    height: 140px; /* Set a fixed height */
+    margin-right: 40px; /* Spacing on the right of the image */
+    border-radius: 70px; 
+    margin-left:30px;
+  }
+  
+  /* Text styles */
+  .service-text h3 {
+    font-size: 1.6rem; /* Increased font size */
+    font-weight: 600;
+    color: #333;
+    margin: 0; /* Remove default margin */
+    line-height: 1.4; /* Better line height for readability */
+    letter-spacing: 2px;
+  }
+  
+  #service-icon-2 {
+    margin-left: 100px;
+    width: 240px;
+  }
+  
+  #service-icon-3 {
+    margin-right: 70px;
+  }
+  #service-icon-1 {
+    margin-right: 70px;
+  }
+
+  #abc {
+   margin-left: 30vw ;
+  }
+
+  /* Importing Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+

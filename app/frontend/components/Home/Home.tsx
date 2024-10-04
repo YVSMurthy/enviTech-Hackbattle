@@ -23,7 +23,7 @@ export default function Home() {
 
     useEffect(() => {
         // Setup TCP connection
-        const ip = '10.0.2.2';
+        const ip = '192.168.199.10';
         const client = TcpSocket.createConnection({ port: 8080, host: ip }, () => {
             console.log('Connected to YOLO server');
         });
@@ -51,10 +51,14 @@ export default function Home() {
             if (stateRef.current === 'on' && !humanDetectedRef.current) {
                 setState('off'); // This should now reflect properly
             }
+
+            // if (stateRef.current === 'off' && humanDetectedRef.current) {
+            //     setState('on'); // This should now reflect properly
+            // }
         });
 
         client.on('error', (error) => {
-            console.log('Error:', error);
+            console.log("The error is : " , error);
         });
 
         client.on('close', () => {
